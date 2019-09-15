@@ -1,1 +1,13 @@
-K-nearest neighbours works by directly measuring the (Euclidean) distance between observations and inferring the class of unlabelled data from the class of its nearest neighbours. In the figure below, the unlabelled instances 1 and 2 will be assigned classes c1 (blue) and c2 (red) as their closest neighbours are red and blue, respectively.
+K-nearest neighbours works by directly measuring the (Euclidean) distance between observations and inferring the class 
+of unlabelled data from the class of its nearest neighbours.
+setting value of k is similar to bias variance tradeoff.
+Common practise of setting k is squareroot of number of training examples.
+In this repo for implementing knn we will take the situation  of breastcancer diagnosis.
+1)Collect data fro uci
+2)exploring and preparing the data.
+  a)Transformation-normalising Numeric data
+  b)Creating test and train data set.
+3)train
+4)Evaluate model performance
+5)Improve model performance
+  a)z-score standardisation
