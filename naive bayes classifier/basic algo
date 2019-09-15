@@ -10,3 +10,16 @@ P(c|x) is the posterior probability of class (target) given predictor (attribute
 P(c) is the prior probability of class.
 P(x|c) is the likelihood which is the probability of predictor given class.
 P(x) is the prior probability of predictor.
+ 
+ Steps involved
+ 1)Collect data
+ 2) exploring and preparing the data
+   a) cleaning and standaradising text data
+   b)splitting text documents into words
+   c)preparing test and train sets
+   d)visualising text data
+   e)creating indicator features for frquent words
+ 3)training a model on data
+ 4)Evaluating model performance
+ 5)Improving model performance
+ 
