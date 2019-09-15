@@ -1,0 +1,106 @@
+> gender <- factor(c("Male","female","Male"))
+> gender
+[1] Male   female Male  
+Levels: female Male
+
+
+> symptoms <- factor(c("severe","mild","moderate"),levels=c("mild","moderate","severe"),ordered=TRUE)
+> symptoms
+[1] severe   mild     moderate
+Levels: mild < moderate < severe
+> symptoms > "moderate"
+[1]  TRUE FALSE FALSE
+
+
+> subject1<- list(fullname="John",gender=gender[1],symptoms=symptoms[1])
+> subject1
+$fullname
+[1] "John"
+
+$gender
+[1] Male
+Levels: female Male
+
+$symptoms
+[1] severe
+Levels: mild < moderate < severe
+
+> subject1[2]
+$gender
+[1] Male
+Levels: female Male
+
+> subject1[[2]]
+[1] Male
+Levels: female Male
+
+> fullname<-c("John","Hari","siva")
+
+> fullname
+[1] "John" "Hari" "siva"
+
+> pt_data<-data.frame(fullname,gender,symptoms)
+
+> pt_data
+  fullname gender symptoms
+1     John   Male   severe
+2     Hari female     mild
+3     siva   Male moderate
+
+> pt_data$fullname
+[1] John Hari siva
+Levels: Hari John siva
+
+> pt_data[c("symptoms","fullname")]
+  symptoms fullname
+1   severe     John
+2     mild     Hari
+3 moderate     siva
+
+> pt_data[1,2]
+[1] Male
+Levels: female Male
+
+> pt_data[,1]
+[1] John Hari siva
+Levels: Hari John siva
+
+> m=matrix(c(1,2,3,4),nrow=2)
+
+> m
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+
+> save(m,file="1.RData")
+
+> load("~/1.RData")
+
+> ls()
+[1] "fullname" "gender"   "m"        "pt_data"  "subject1" "symptoms"
+
+> rm(m)
+
+> write.csv(pt_data,file="pt_data.csv",row.names = FALSE)
+
+> pt<-read.csv("pt_data.csv",stringsAsFactors = FALSE)
+
+> pt
+  fullname gender symptoms
+1     John   Male   severe
+2     Hari female     mild
+3     siva   Male moderate
+
+> str(pt)
+'data.frame':	3 obs. of  3 variables:
+ $ fullname: chr  "John" "Hari" "siva"
+ $ gender  : chr  "Male" "female" "Male"
+ $ symptoms: chr  "severe" "mild" "moderate"
+ 
+ > summary(pt)
+   fullname            gender            symptoms        
+ Length:3           Length:3           Length:3          
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+ 
+ 
