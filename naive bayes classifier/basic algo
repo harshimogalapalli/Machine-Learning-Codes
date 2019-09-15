@@ -1,0 +1,12 @@
+Naive Bayesian model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods.
+
+Bayes theorem provides a way of calculating posterior probability P(c|x) from P(c), P(x) and P(x|c). Look at the equation below:
+Bayes_rule
+
+Here,
+p(c|x)=p(x|c)p(c)/p(x)
+
+P(c|x) is the posterior probability of class (target) given predictor (attribute).
+P(c) is the prior probability of class.
+P(x|c) is the likelihood which is the probability of predictor given class.
+P(x) is the prior probability of predictor.
