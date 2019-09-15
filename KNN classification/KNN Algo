@@ -1,0 +1,1 @@
+K-nearest neighbours works by directly measuring the (Euclidean) distance between observations and inferring the class of unlabelled data from the class of its nearest neighbours. In the figure below, the unlabelled instances 1 and 2 will be assigned classes c1 (blue) and c2 (red) as their closest neighbours are red and blue, respectively.
